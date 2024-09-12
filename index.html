@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Seleccion de Auditoria</title>
+    <link
+      rel="icon"
+      href="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.10.0/mercadolibre/favicon.svg"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        --white-color: #fff;
+        font-family: sans-serif;
+      }
+      .container {
+        background-color: rgb(6, 95, 196);
+        display: flex;
+        flex-wrap: wrap;
+        height: 5em;
+      }
+      h2 {
+        width: 100%;
+        text-align: center;
+        color: var(--white-color);
+        padding-top: 10px;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(52, 93, 228);
+      }
+      li {
+        list-style: none;
+        width: 14%;
+      }
+      a {
+        display: flex;
+        color: var(--white-color);
+        text-decoration: none;
+        height: 3em;
+        align-items: center;
+        justify-content: center;
+      }
+      a:hover {
+        background-color: rgb(75, 113, 236);
+      }
+
+      /*Stock audit*/
+
+      .false-stock {
+        width: 80%;
+        height: 80vh;
+        margin: auto;
+        text-align: center;
+        flex-direction: column;
+      }
+      .container-inputs {
+        width: 30%;
+        height: 6em;
+        gap: 2px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        outline: none;
+        border: none;
+        background-color: #e1e1e1;
+        padding-left: 10px;
+      }
+      select {
+        width: 30%;
+        height: 2em;
+        margin-top: 10px;
+        outline: none;
+      }
+
+      .text-generate {
+        background-color: rgb(241, 241, 241);
+        width: 100%;
+        height: 20em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 50px;
+      }
+      .imagen {
+        background: url(https://i.ibb.co/9YThcDx/ola.png);
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+        width: 100%;
+        height: 80vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Seleccion de Auditorias</h2>
+      <ul>
+        <li>
+          <a href="https://otonielvz.github.io/Stock-Audit/" target="_blank"
+            >Stock Audit Falso</a
+          >
+        </li>
+        <li>
+          <a href="https://otonielvz.github.io/Cruce-de-Melis/" target="_blank"
+            >Cruce de Melis</a
+          >
+        </li>
+        <li>
+          <a href="https://otonielvz.github.io/Faltante-OB/" target="_blank"
+            >Faltante OB</a
+          >
+        </li>
+        <li>
+          <a href="https://otonielvz.github.io/Excedente-OB/" target="_blank"
+            >Excedente OB</a
+          >
+        </li>
+        <li>
+          <a href="https://otonielvz.github.io/Put-Away/" target="_blank"
+            >Put Away</a
+          >
+        </li>
+        <li>
+          <a href="https://otonielvz.github.io/Responsables/" target="_blank"
+            >Inbound Audit</a
+          >
+        </li>
+        <li>
+          <a href="https://otonielvz.github.io/Shortage/" target="_blank"
+            >Shortage</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="imagen"></div>
+  </body>
+</html>
