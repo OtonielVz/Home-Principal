@@ -1,146 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Seleccion de Auditoria</title>
-    <link
-      rel="icon"
-      href="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.10.0/mercadolibre/favicon.svg"
-      type="image/x-icon"
-    />
+    <title>Home | Auditorias LP</title>
+    <!--By: Otoniel Palacios T2-->
     <style>
-      * {
-        padding: 0;
+      body {
+        font-family: Arial, sans-serif;
         margin: 0;
-        box-sizing: border-box;
-        --white-color: #fff;
-        font-family: sans-serif;
+        background-color: #f0f4f8;
       }
-      .container {
-        background-color: rgb(6, 95, 196);
+      .notification {
+        background-color: #ffeb3b;
+        color: #333;
+        padding: 10px 20px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        transition: opacity 0.5s ease;
         display: flex;
-        flex-wrap: wrap;
-        height: 5em;
+        justify-content: space-between;
+        align-items: center;
       }
-      h2 {
-        width: 100%;
-        text-align: center;
-        color: var(--white-color);
-        padding-top: 10px;
+      .notification button {
+        background-color: transparent;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        font-size: 16px;
       }
-      ul {
-        width: 100%;
+      .chat-notification {
+        background-color: #e0f7fa;
+        color: #333;
+        padding: 10px 20px;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        z-index: 1000;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .navbar {
         display: flex;
-        justify-content: space-evenly;
-        background-color: rgb(52, 93, 228);
-      }
-      li {
-        list-style: none;
-        width: 14%;
-      }
-      a {
-        display: flex;
-        color: var(--white-color);
-        text-decoration: none;
-        height: 3em;
         align-items: center;
         justify-content: center;
+        background-color: #2b3b40;
+        padding: 10px 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
       }
-      a:hover {
-        background-color: rgb(75, 113, 236);
+      .navbar img {
+        height: 40px;
+        margin-right: 20px;
       }
-
-      /*Stock audit*/
-
-      .false-stock {
-        width: 80%;
-        height: 80vh;
-        margin: auto;
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        transition: background-color 0.3s;
+      }
+      .navbar a:hover {
+        background-color: #276262;
+      }
+      .container {
         text-align: center;
-        flex-direction: column;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 90%;
+        max-width: 400px;
+        margin: 100px auto;
       }
-      .container-inputs {
-        width: 30%;
-        height: 6em;
-        gap: 2px;
-        margin: 10px auto;
-        display: flex;
-        flex-direction: column;
+      h1 {
+        margin-bottom: 30px;
+        color: #333333;
       }
-      input {
-        outline: none;
-        border: none;
-        background-color: #e1e1e1;
-        padding-left: 10px;
+      .audit-option {
+        display: block;
+        margin: 15px 0;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        background-color: #276262;
+        border-radius: 5px;
+        transition: background-color 0.3s;
       }
-      select {
-        width: 30%;
-        height: 2em;
-        margin-top: 10px;
-        outline: none;
-      }
-
-      .text-generate {
-        background-color: rgb(241, 241, 241);
-        width: 100%;
-        height: 20em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 50px;
-      }
-      .imagen {
-        background: url(https://i.ibb.co/9YThcDx/ola.png);
-        background-position: center;
-        background-size: cover;
-        margin: auto;
-        width: 100%;
-        height: 80vh;
+      .audit-option:hover {
+        background-color: #63b0b0;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h2>Seleccion de Auditorias</h2>
-      <ul>
-        <li>
-          <a href="https://otonielvz.github.io/Stock-Audit/" target="_blank"
-            >Stock Audit Falso</a
-          >
-        </li>
-        <li>
-          <a href="https://otonielvz.github.io/Cruce-de-Melis/" target="_blank"
-            >Cruce de Melis</a
-          >
-        </li>
-        <li>
-          <a href="https://otonielvz.github.io/Faltante-OB/" target="_blank"
-            >Faltante OB</a
-          >
-        </li>
-        <li>
-          <a href="https://otonielvz.github.io/Excedente-OB/" target="_blank"
-            >Excedente OB</a
-          >
-        </li>
-        <li>
-          <a href="https://otonielvz.github.io/Put-Away/" target="_blank"
-            >Put Away</a
-          >
-        </li>
-        <li>
-          <a href="https://otonielvz.github.io/Responsables/" target="_blank"
-            >Inbound Audit</a
-          >
-        </li>
-        <li>
-          <a href="https://otonielvz.github.io/Shortage/" target="_blank"
-            >Shortage</a
-          >
-        </li>
-      </ul>
+    <div class="navbar">
+      <img
+        src="https://i0.wp.com/www.audiotienda.co/wp-content/uploads/2019/05/Mercadolibre-logo-01.png?fit=1200%2C404&ssl=1"
+        alt="Logo MercadoLibre"
+      />
+      <a href="#">Forms Responsables</a>
+      <a href="#">Respuestas</a>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdVfYBQyKCMPu3Eg14MptRT9QmZLQTpOTHQwfIFtw2J3M00wQ/viewform"
+        >Agregar Machote</a
+      >
+      <a href="#">Contacto</a>
     </div>
-    <div class="imagen"></div>
+
+    <div class="container">
+      <h1>Selecciona una Auditoría</h1>
+      <a
+        href="https://otonielvz.github.io/Stock-Audit-Falso/"
+        class="audit-option"
+        target="_blank"
+        >Stock Audit Falso</a
+      >
+      <a
+        href="https://otonielvz.github.io/Stock-Audit/"
+        class="audit-option"
+        target="_blank"
+        >Stock Audit Verdadero</a
+      >
+      <a href="#" class="audit-option">Error Check In</a>
+      <a href="#" class="audit-option">Error Put Away</a>
+      <a
+        href="https://otonielvz.github.io/Responsables/"
+        class="audit-option"
+        target="_blank"
+        >Inbound Audit</a
+      >
+    </div>
+
+    <div class="notification" id="notification">
+      <span>
+        Página en proceso. Si tienes alguna duda, comentario o si el texto
+        presenta errores y se requieren modificaciones, házmelo saber, gracias.
+      </span>
+      <button onclick="closeNotification()">X</button>
+    </div>
+
+    <div class="chat-notification" id="chat-notification">
+      Algunos machotes aún no funcionan, es por eso posiblemente no puedas
+      acceder a todas las opciones.
+    </div>
+
+    <script>
+      const notificationTimeout = setTimeout(() => {
+        const notification = document.getElementById("notification");
+        notification.style.opacity = "0";
+        setTimeout(() => {
+          notification.style.display = "none";
+        }, 500);
+      }, 10000);
+
+      setTimeout(() => {
+        const chatNotification = document.getElementById("chat-notification");
+        chatNotification.style.opacity = "1";
+      }, 10000);
+
+      function closeNotification() {
+        const notification = document.getElementById("notification");
+        notification.style.opacity = "0";
+        clearTimeout(notificationTimeout);
+        setTimeout(() => {
+          notification.style.display = "none";
+        }, 500);
+      }
+    </script>
   </body>
 </html>
