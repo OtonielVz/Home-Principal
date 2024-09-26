@@ -15,6 +15,19 @@
         font-family: Arial, sans-serif;
         margin: 0;
         background-color: #f0f4f8;
+        position: relative;
+        overflow-x: hidden;
+      }
+      .background-collage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("https://wp.tyt.com.mx/wp-content/uploads/2023/05/Mercado-Libre-hot-sale-centros-ultima-milla-1024x597.jpg");
+        background-size: cover;
+        opacity: 0.1; /* Ajusta la opacidad del fondo */
+        z-index: -1;
       }
       .notification {
         background-color: #ffeb3b;
@@ -97,6 +110,8 @@
         width: 90%;
         max-width: 400px;
         margin: 100px auto;
+        z-index: 10;
+        position: relative;
       }
       h1 {
         margin-bottom: 30px;
@@ -118,6 +133,8 @@
     </style>
   </head>
   <body>
+    <div class="background-collage"></div>
+
     <div class="navbar">
       <img
         src="https://i0.wp.com/www.audiotienda.co/wp-content/uploads/2019/05/Mercadolibre-logo-01.png?fit=1200%2C404&ssl=1"
