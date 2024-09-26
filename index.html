@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Auditorias LP</title>
-    <link
-      rel="icon"
-      href="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.10.0/mercadolibre/favicon.svg"
-      type="image/x-icon"
-    />
     <!--By: Otoniel Palacios T2-->
     <style>
       body {
@@ -38,12 +33,12 @@
         border: none;
         color: #333;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 15px;
       }
       .chat-notification {
         background-color: #e0f7fa;
         color: #333;
-        padding: 10px 20px;
+        padding: 8px 15px;
         position: fixed;
         bottom: 80px;
         right: 20px;
@@ -52,6 +47,16 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         opacity: 0;
         transition: opacity 0.5s ease;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .chat-notification button {
+        background-color: transparent;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        font-size: 12px;
       }
       .navbar {
         display: flex;
@@ -113,13 +118,19 @@
         src="https://i0.wp.com/www.audiotienda.co/wp-content/uploads/2019/05/Mercadolibre-logo-01.png?fit=1200%2C404&ssl=1"
         alt="Logo MercadoLibre"
       />
-      <a href="#">Forms Responsables</a>
-      <a href="#">Respuestas</a>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdMeyzPgdjyIlbrAa_gPg4cydKzoXLZ2jIHSrsgPaKy8t7A1g/viewform"
+        >Forms Responsables</a
+      >
+      <a
+        href="https://docs.google.com/spreadsheets/d/1zE_oSG0tJtDcu0xO6mx7VODaYFNf9H1D-6c3GrnnixY/edit?gid=1272004046#gid=1272004046"
+        >Respuestas</a
+      >
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSdVfYBQyKCMPu3Eg14MptRT9QmZLQTpOTHQwfIFtw2J3M00wQ/viewform"
         >Agregar Machote</a
       >
-      <a href="#">Contacto</a>
+      <a href="https://meli.workplace.com/chat/t/100087121038438">Contacto</a>
     </div>
 
     <div class="container">
@@ -155,8 +166,11 @@
     </div>
 
     <div class="chat-notification" id="chat-notification">
-      Algunos machotes aún no funcionan, es por eso posiblemente no puedas
-      acceder a todas las opciones.
+      <span>
+        Algunos machotes aún no funcionan, es por eso posiblemente no puedas
+        acceder a todas las opciones.
+      </span>
+      <button onclick="closeChatNotification()">X</button>
     </div>
 
     <script>
@@ -179,6 +193,14 @@
         clearTimeout(notificationTimeout);
         setTimeout(() => {
           notification.style.display = "none";
+        }, 500);
+      }
+
+      function closeChatNotification() {
+        const chatNotification = document.getElementById("chat-notification");
+        chatNotification.style.opacity = "0";
+        setTimeout(() => {
+          chatNotification.style.display = "none";
         }, 500);
       }
     </script>
