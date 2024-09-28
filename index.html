@@ -55,29 +55,6 @@
         cursor: pointer;
         font-size: 15px;
       }
-      .chat-notification {
-        background-color: #e0f7fa;
-        color: #333;
-        padding: 8px 15px;
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        z-index: 1000;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .chat-notification button {
-        background-color: transparent;
-        border: none;
-        color: #333;
-        cursor: pointer;
-        font-size: 12px;
-      }
       .navbar {
         display: flex;
         align-items: center;
@@ -180,9 +157,15 @@
       <a
         href="https://otonielvz.github.io/Excedente-Put-Away/"
         class="audit-option"
+        target="_blank"
         >Excedente Put Away
       </a>
-      <a href="#" class="audit-option">Faltante Put Away</a>
+      <a
+        href="https://otonielvz.github.io/Faltante/"
+        class="audit-option"
+        target="_blank"
+        >Faltante Put Away
+      </a>
     </div>
 
     <div class="notification" id="notification">
@@ -191,14 +174,6 @@
         presenta errores y se requieren modificaciones, házmelo saber, gracias.
       </span>
       <button onclick="closeNotification()">X</button>
-    </div>
-
-    <div class="chat-notification" id="chat-notification">
-      <span>
-        Algunos machotes aún no funcionan, es por eso posiblemente no puedas
-        acceder a todas las opciones.
-      </span>
-      <button onclick="closeChatNotification()">X</button>
     </div>
 
     <script>
@@ -210,25 +185,12 @@
         }, 500);
       }, 10000);
 
-      setTimeout(() => {
-        const chatNotification = document.getElementById("chat-notification");
-        chatNotification.style.opacity = "1";
-      }, 10000);
-
       function closeNotification() {
         const notification = document.getElementById("notification");
         notification.style.opacity = "0";
         clearTimeout(notificationTimeout);
         setTimeout(() => {
           notification.style.display = "none";
-        }, 500);
-      }
-
-      function closeChatNotification() {
-        const chatNotification = document.getElementById("chat-notification");
-        chatNotification.style.opacity = "0";
-        setTimeout(() => {
-          chatNotification.style.display = "none";
         }, 500);
       }
     </script>
