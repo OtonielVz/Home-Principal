@@ -1,198 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Auditorias LP</title>
-    <!--By: Otoniel Palacios T2-->
-        <link
-      rel="icon"
-      href="https://i.ibb.co/G9T33Zy/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="https://i.ibb.co/G9T33Zy/favicon.png" type="image/x-icon" />
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background-color: #f0f4f8;
-        position: relative;
-        overflow-x: hidden;
-      }
-      .background-collage {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url("https://via.placeholder.com/800") center/cover,
-          url("https://via.placeholder.com/800") center/cover,
-          url("https://via.placeholder.com/800") center/cover,
-          url("https://via.placeholder.com/800") center/cover;
-        opacity: 0.15; /* Ajusta la opacidad del fondo */
-        z-index: -1;
-      }
-      .notification {
-        background-color: #ffeb3b;
-        color: #333;
-        padding: 10px 20px;
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        opacity: 1;
-        transition: opacity 0.5s ease;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .notification button {
-        background-color: transparent;
-        border: none;
-        color: #333;
-        cursor: pointer;
-        font-size: 15px;
-      }
-      .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #2b3b40;
-        padding: 10px 0;
-        margin: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-      }
-      .navbar img {
-        height: 40px;
-        margin-right: 20px;
-      }
-      .navbar a {
-        color: white;
-        text-decoration: none;
-        padding: 15px 20px;
-        transition: background-color 0.3s;
-      }
-      .navbar a:hover {
-        background-color: #276262;
-      }
-      .container {
-        text-align: center;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 40px;
-        width: 90%;
-        max-width: 400px;
-        margin: 100px auto;
-        z-index: 10;
-        position: relative;
-      }
-      h1 {
-        margin-bottom: 30px;
-        color: #333333;
-      }
-      .audit-option {
-        display: block;
-        margin: 15px 0;
-        padding: 15px;
-        text-decoration: none;
-        color: white;
-        background-color: #276262;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-      }
-      .audit-option:hover {
-        background-color: #63b0b0;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f4f8;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .background-collage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("https://via.placeholder.com/800") center/cover,
+                        url("https://via.placeholder.com/800") center/cover,
+                        url("https://via.placeholder.com/800") center/cover,
+                        url("https://via.placeholder.com/800") center/cover;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2b3b40;
+            padding: 10px 0;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar img {
+            height: 40px;
+            margin-right: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #276262;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #276262;
+            min-width: 200px;
+            z-index: 1;
+            margin-top: 10px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-content a:hover {
+            background-color: #63b0b0;
+        }
+        .new-option {
+            color: yellow;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .show {
+            display: block;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            margin: 100px auto;
+            z-index: 10;
+            position: relative;
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+        .audit-option {
+            display: block;
+            margin: 15px 0;
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #276262;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .audit-option:hover {
+            background-color: #63b0b0;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="background-collage"></div>
 
     <div class="navbar">
-      <img
-        src="https://i0.wp.com/www.audiotienda.co/wp-content/uploads/2019/05/Mercadolibre-logo-01.png?fit=1200%2C404&ssl=1"
-        alt="Logo MercadoLibre"
-      />
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdMeyzPgdjyIlbrAa_gPg4cydKzoXLZ2jIHSrsgPaKy8t7A1g/viewform"
-        >Forms Responsables</a
-      >
-      <a
-        href="https://docs.google.com/spreadsheets/d/1zE_oSG0tJtDcu0xO6mx7VODaYFNf9H1D-6c3GrnnixY/edit?gid=1272004046#gid=1272004046"
-        >Respuestas</a
-      >
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdVfYBQyKCMPu3Eg14MptRT9QmZLQTpOTHQwfIFtw2J3M00wQ/viewform"
-        >Agregar Machote</a
-      >
-      <a href="https://meli.workplace.com/chat/t/100087121038438">Contacto</a>
+        <img src="https://i0.wp.com/www.audiotienda.co/wp-content/uploads/2019/05/Mercadolibre-logo-01.png?fit=1200%2C404&ssl=1" alt="Logo MercadoLibre" />
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMeyzPgdjyIlbrAa_gPg4cydKzoXLZ2jIHSrsgPaKy8t7A1g/viewform">Forms Responsables</a>
+        <a href="https://docs.google.com/spreadsheets/d/1zE_oSG0tJtDcu0xO6mx7VODaYFNf9H1D-6c3GrnnixY/edit?gid=1272004046#gid=1272004046">Respuestas</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVfYBQyKCMPu3Eg14MptRT9QmZLQTpOTHQwfIFtw2J3M00wQ/viewform">Agregar Machote</a>
+        <a href="https://meli.workplace.com/chat/t/100087121038438">Contacto</a>
+        <div class="dropdown">
+            <a href="#" id="dropdownButton">Otras Herramientas</a>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="https://link-a-otra-herramienta.com">
+                minúsculas a Mayúsculas
+                    <span class="new-option">Nueva opción!</span>
+                </a>
+            </div>
+        </div>
     </div>
 
     <div class="container">
-      <h1>Selecciona una Auditoría</h1>
-      <a
-        href="https://otonielvz.github.io/Responsables/"
-        class="audit-option"
-        target="_blank"
-        >Inbound Audit</a
-      >
-      <a
-        href="https://otonielvz.github.io/Stock-Audit-Falso/"
-        class="audit-option"
-        target="_blank"
-        >Stock Audit Falso</a
-      >
-      <a
-        href="https://otonielvz.github.io/Stock-Audit/"
-        class="audit-option"
-        target="_blank"
-        >Stock Audit Verdadero</a
-      >
-      <a
-        href="https://otonielvz.github.io/Excedente-Put-Away/"
-        class="audit-option"
-        target="_blank"
-        >Excedente Put Away
-      </a>
-      <a
-        href="https://otonielvz.github.io/Faltante/"
-        class="audit-option"
-        target="_blank"
-        >Faltante Put Away
-      </a>
-    </div>
-
-    <div class="notification" id="notification">
-      <span>
-        Página en proceso. Si tienes alguna duda, comentario o si el texto
-        presenta errores y se requieren modificaciones, házmelo saber, gracias.
-      </span>
-      <button onclick="closeNotification()">X</button>
+        <h1>Selecciona una Auditoría</h1>
+        <a href="https://otonielvz.github.io/Responsables/" class="audit-option" target="_blank">Inbound Audit</a>
+        <a href="https://otonielvz.github.io/Stock-Audit-Falso/" class="audit-option" target="_blank">Stock Audit Falso</a>
+        <a href="https://otonielvz.github.io/Stock-Audit/" class="audit-option" target="_blank">Stock Audit Verdadero</a>
+        <a href="https://otonielvz.github.io/Excedente-Put-Away/" class="audit-option" target="_blank">Excedente Put Away</a>
+        <a href="https://otonielvz.github.io/Faltante/" class="audit-option" target="_blank">Faltante Put Away</a>
     </div>
 
     <script>
-      const notificationTimeout = setTimeout(() => {
-        const notification = document.getElementById("notification");
-        notification.style.opacity = "0";
-        setTimeout(() => {
-          notification.style.display = "none";
-        }, 500);
-      }, 10000);
+        const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownContent = document.getElementById('dropdownContent');
 
-      function closeNotification() {
-        const notification = document.getElementById("notification");
-        notification.style.opacity = "0";
-        clearTimeout(notificationTimeout);
-        setTimeout(() => {
-          notification.style.display = "none";
-        }, 500);
-      }
+        dropdownButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownContent.classList.toggle('show');
+        });
+
+        // Cerrar el menú desplegable si se hace clic fuera de él
+        window.addEventListener('click', (e) => {
+            if (!dropdownButton.contains(e.target) && !dropdownContent.contains(e.target)) {
+                dropdownContent.classList.remove('show');
+            }
+        });
     </script>
-  </body>
+</body>
 </html>
