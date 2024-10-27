@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,8 +7,9 @@
     <title>Home | Auditorias LP</title>
     <link rel="icon" href="https://i.ibb.co/G9T33Zy/favicon.png" type="image/x-icon" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Space+Grotesk:wght@300..700&display=swap');
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'poppins', sans-serif;
             margin: 0;
             background-color: #d9d9da;
             position: relative;
@@ -21,14 +23,13 @@
         .navbar {
             display: flex;
             align-items: center;
-            justify-content: center;
-            background-color: #2b3b40;
-            padding: 10px 0;
+            justify-content: space-evenly;
+            background-color: #222222;
+            padding: 8px 0;
             margin: 0;
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1000;
         }
         .navbar img {
             height: 40px;
@@ -41,29 +42,7 @@
             transition: background-color 0.3s;
         }
         .navbar a:hover {
-            background-color: #276262;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #276262;
-            min-width: 200px;
-            z-index: 1;
-            margin-top: 10px;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        .dropdown-content a:hover {
-            background-color: #63b0b0;
+            background-color: #595858;
         }
         .new-option {
             color: yellow;
@@ -78,11 +57,10 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 40px;
+            padding: 30px;
             width: 90%;
             max-width: 400px;
-            margin: 20px; /* Margen para separar las cajas */
-            z-index: 10;
+            margin: 20px;
         }
         h1 {
             margin-bottom: 30px;
@@ -94,18 +72,18 @@
             padding: 15px;
             text-decoration: none;
             color: white;
-            background-color: #276262;
+            background-color: #333;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
         .audit-option:hover {
-            background-color: #63b0b0;
+            background-color: #595858;
         }
         .new-audit {
             display: flex;
             justify-content: center;
             border: 2px solid yellow;
-            background-color: #4b787f; /* Un color diferente para destacar */
+            background-color: #595858; /* Un color diferente para destacar */
         }
         .new-section {
             margin-top: 40px;
@@ -131,46 +109,25 @@
         <img src="https://i0.wp.com/www.audiotienda.co/wp-content/uploads/2019/05/Mercadolibre-logo-01.png?fit=1200%2C404&ssl=1" alt="Logo MercadoLibre" />
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMeyzPgdjyIlbrAa_gPg4cydKzoXLZ2jIHSrsgPaKy8t7A1g/viewform" target="_blank">Forms Responsables</a>
         <a href="https://docs.google.com/spreadsheets/d/1zE_oSG0tJtDcu0xO6mx7VODaYFNf9H1D-6c3GrnnixY/edit?gid=1272004046#gid=1272004046" target="_blank">Respuestas</a>
-        <div class="dropdown">
-            <a href="#" id="dropdownButton">Otras Herramientas</a>
-            <div class="dropdown-content" id="dropdownContent">
-                <a href="https://otonielvz.github.io/Minustomayus/" target="_blank">
-                minúsculas a Mayúsculas
-                </a>
-            </div>
         </div>
     </div>
 
     <div class="container">
-        <h1>Selecciona una Auditoría</h1>
-        <a href="https://otonielvz.github.io/Responsables/" class="audit-option" target="_blank">Inbound Audit</a>
-        <a href="https://otonielvz.github.io/Stock-Audit-Falso/" class="audit-option" target="_blank">Stock Audit Falso</a>
-        <a href="https://otonielvz.github.io/Stock-Audit/" class="audit-option" target="_blank">Stock Audit Verdadero</a>
-        <a href="https://otonielvz.github.io/Excedente-Put-Away/" class="audit-option" target="_blank">Excedente Put Away</a>
-        <a href="https://otonielvz.github.io/Faltante/" class="audit-option" target="_blank">Faltante Put Away</a>
-        <a href="https://otonielvz.github.io/Rezagos/" class="audit-option" target="_blank">Auditoría Rezagos</a>
+        <h1>Selecciona una Auditoría 👇</h1>
+        <a href="https://otonielvz.github.io/Responsables/" class="audit-option" target="_blank">Inbound Audit📦</a>
+        <a href="https://otonielvz.github.io/Stock-Audit-Falso/" class="audit-option" target="_blank">Stock Audit Falso❌</a>
+        <a href="https://otonielvz.github.io/Stock-Audit/" class="audit-option" target="_blank">Stock Audit Verdadero✅</a>
+        <a href="https://otonielvz.github.io/Excedente-Put-Away/" class="audit-option" target="_blank">Excedente Put Away❗</a>
+        <a href="https://otonielvz.github.io/Faltante/" class="audit-option" target="_blank">Faltante Put Away🔴</a>
+        <a href="https://otonielvz.github.io/Rezagos/" class="audit-option" target="_blank">Auditoría Rezagos💹</a>
     </div>
 
     <div class="new-section">
-        <h2>Auditorías Transfer MWH</h2>
-        <a href="https://otonielvz.github.io/TSVH/" class="audit-option new-audit" target="_blank">TS HV Faltante/Sobrante</a>
+        <h2>Auditorías Transfer MWH🚘</h2>
+        <a href="https://otonielvz.github.io/TSVH/" class="audit-option" target="_blank">TS HV Faltante/Sobrante📱</a>
     </div>
 
     <script>
-        const dropdownButton = document.getElementById('dropdownButton');
-        const dropdownContent = document.getElementById('dropdownContent');
-
-        dropdownButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdownContent.classList.toggle('show');
-        });
-
-        // Cerrar el menú desplegable si se hace clic fuera de él
-        window.addEventListener('click', (e) => {
-            if (!dropdownButton.contains(e.target) && !dropdownContent.contains(e.target)) {
-                dropdownContent.classList.remove('show');
-            }
-        });
     </script>
 </body>
 </html>
