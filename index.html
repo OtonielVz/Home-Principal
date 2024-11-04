@@ -13,6 +13,7 @@
             background-color: #f9f9f9;
             color: #333;
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -22,15 +23,14 @@
         }
         .navbar {
             display: flex;
+            position: absolute;
+            top: 0;
             align-items: center;
             justify-content: space-around;
             background-color: #b22222; /* Rojo navideño */
             padding: 10px 0;
             width: 100%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            position: fixed;
-            top: 0;
-            z-index: 10;
         }
         .navbar img {
             height: 40px;
@@ -66,7 +66,6 @@
             transform: scale(1.05);
         }
         h1 {
-            margin-top: 30px;
             color: #a52a2a; /* Marrón */
         }
         .audit-option {
@@ -122,6 +121,18 @@
                 transform: translateY(100vh);
             }
         }
+        /* Estilos para el reno */
+        .reindeer {
+            position: absolute;
+            top: 30%; /* Posición vertical */
+            width: 100px; /* Ajusta el tamaño según necesites */
+            animation: move 10s linear infinite; /* Duración y tipo de movimiento */
+        }
+        @keyframes move {
+            0% { transform: translateX(-100px); }
+            50% { transform: translateX(calc(100vw + 100px)); }
+            100% { transform: translateX(-100px); }
+        }
     </style>
 </head>
 <body>
@@ -151,14 +162,15 @@
         <div class="audit-box">
             <a href="https://otonielvz.github.io/Rezagos/" class="audit-option" target="_blank">Auditoría Rezagos💹</a>
         </div>
-    </div>
-
-    <div class="new-section">
-        <h2>Auditorías Transfer MWH🚘</h2>
-        <a href="https://otonielvz.github.io/TSVH/" class="audit-option" target="_blank">TS HV Faltante/Sobrante📱</a>
+        <div class="audit-box">
+            <a href="https://otonielvz.github.io/TSVH/" class="audit-option" target="_blank">TS HV Faltante/Sobrante📱</a>
+        </div>
     </div>
 
     <div class="snow" id="snow"></div>
+    
+    <!-- Agrega aquí el reno -->
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/012/520/954/small_2x/christmas-with-santa-claus-and-reindeer-flying-png.png" alt="Reno" class="reindeer" />
 
     <script>
         const snowContainer = document.getElementById('snow');
