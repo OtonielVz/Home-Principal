@@ -78,6 +78,20 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+        .second{
+            display: block;
+            margin: 10px 0;
+            padding: 6px;
+            text-decoration: none;
+            color: white;
+            background-color: #a10210;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .second:hover{
+                background-color: #fb0000;
+            }
         .audit-option:hover {
             background-color: #32cd32; /* Verde más claro */
         }
@@ -133,6 +147,9 @@
             50% { transform: translateX(calc(100vw + 100px)); }
             100% { transform: translateX(-100px); }
         }
+        .radius{
+            border: 2px solid red;
+        }
     </style>
 </head>
 <body>
@@ -144,6 +161,9 @@
 
     <h1>Selecciona una Auditoría 🎄</h1>
     <div class="container">
+        <div class="audit-box radius">
+            <a href="https://docs.google.com/spreadsheets/d/19KeBq3ao7_0hlLLFg2EDjSfIyXk9827VS3f7OFtNpJw/copy" class="second" target="_blank">Template Dirigidas Codigos Universales🐱‍🏍</a>
+        </div>
         <div class="audit-box">
             <a href="https://otonielvz.github.io/Responsables/" class="audit-option" target="_blank">Inbound Audit📦</a>
         </div>
@@ -169,7 +189,6 @@
 
     <div class="snow" id="snow"></div>
     
-    <!-- Agrega aquí el reno -->
     <img src="https://static.vecteezy.com/system/resources/thumbnails/012/520/954/small_2x/christmas-with-santa-claus-and-reindeer-flying-png.png" alt="Reno" class="reindeer" />
 
     <script>
