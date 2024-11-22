@@ -1,216 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Auditorias LP</title>
-    <link rel="icon" href="https://i.ibb.co/jy1GrBx/logo-nuevo.png" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUDO</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+        *{margin: 0; padding: 0;}
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            position: relative;
-            overflow: hidden; /* Para evitar el scroll por la nieve */
+            display: grid;
+            place-content: center;
+            place-items: center;
+            height: 100dvh;
         }
-        .navbar {
-            display: flex;
-            position: absolute;
-            top: 0;
-            align-items: center;
-            justify-content: space-around;
-            background-color: #b22222; /* Rojo navideño */
-            padding: 10px 0;
-            width: 100%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        .navbar img {
-            height: 40px;
-        }
-        .navbar a {
-            color: white;
+        a{
             text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .navbar a:hover {
-            background-color: #8b0000; /* Rojo oscuro */
-        }
-        .container {
+            background-color: rgb(49, 108, 255);
+            color: #fff;
+            width: 16em;
+            height: 3em;
+            border-radius: 6px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            text-align: center;
-        }
-        .audit-box {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 15px;
-            padding: 20px;
-            width: 250px; /* Ancho fijo para las cajas */
-            border: 2px solid #008000; /* Verde navideño */
-            transition: transform 0.3s;
-        }
-        .audit-box:hover {
-            transform: scale(1.05);
-        }
-        h1 {
-            color: #a52a2a; /* Marrón */
-        }
-        .audit-option {
-            display: block;
-            margin: 10px 0;
-            padding: 10px;
-            text-decoration: none;
-            color: white;
-            background-color: #228b22; /* Verde bosque */
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .second{
-            display: block;
-            margin: 10px 0;
-            padding: 6px;
-            text-decoration: none;
-            color: white;
-            background-color: #a10210;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
 
-        .second:hover{
-                background-color: #fb0000;
+            &:hover{
+                background-color: rgb(80, 130, 254);
+
             }
-        .audit-option:hover {
-            background-color: #32cd32; /* Verde más claro */
-        }
-        .new-section {
-            margin-top: 40px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 90%;
-            max-width: 400px;
-            margin: 20px auto; /* Centrar la nueva sección */
-            border: 2px solid #ff4500; /* Naranja navideño */
-        }
-        .new-section h2 {
-            color: #8b0000; /* Rojo oscuro */
-            margin-bottom: 20px;
-        }
-        /* Estilos para la nieve */
-        .snow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .snowflake {
-            position: absolute;
-            top: -10%;
-            color: white;
-            font-size: 1em;
-            opacity: 0.8;
-            pointer-events: none;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(100vh);
-            }
-        }
-        /* Estilos para el reno */
-        .reindeer {
-            position: absolute;
-            top: 30%; /* Posición vertical */
-            width: 100px; /* Ajusta el tamaño según necesites */
-            animation: move 10s linear infinite; /* Duración y tipo de movimiento */
-        }
-        @keyframes move {
-            0% { transform: translateX(-100px); }
-            50% { transform: translateX(calc(100vw + 100px)); }
-            100% { transform: translateX(-100px); }
-        }
-        .radius{
-            border: 2px solid red;
         }
     </style>
+    
 </head>
 <body>
-    <div class="navbar">
-        <img src="https://i0.wp.com/www.audiotienda.co/wp-content/uploads/2019/05/Mercadolibre-logo-01.png?fit=1200%2C404&ssl=1" alt="Logo MercadoLibre" />
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMeyzPgdjyIlbrAa_gPg4cydKzoXLZ2jIHSrsgPaKy8t7A1g/viewform" target="_blank">Forms Responsables</a>
-        <a href="https://docs.google.com/spreadsheets/d/1zE_oSG0tJtDcu0xO6mx7VODaYFNf9H1D-6c3GrnnixY/edit?gid=1272004046#gid=1272004046" target="_blank">Respuestas</a>
-    </div>
-
-    <h1>Selecciona una Auditoría 🎄</h1>
-    <div class="container">
-        <div class="audit-box radius">
-            <a href="https://docs.google.com/spreadsheets/d/1Uwqhd6114Peg3I0kVZTAMHaHZ_7VVvKm95_tnptmLkE/copy" class="second" target="_blank">Template Dirigidas Codigos Universales🐱‍🏍</a>
-        </div>
-        <div class="audit-box">
-            <a href="https://otonielvz.github.io/Responsables/" class="audit-option" target="_blank">Inbound Audit📦</a>
-        </div>
-        <div class="audit-box">
-            <a href="https://otonielvz.github.io/Stock-Audit-Falso/" class="audit-option" target="_blank">Stock Audit Falso❌</a>
-        </div>
-        <div class="audit-box">
-            <a href="https://otonielvz.github.io/Stock-Audit/" class="audit-option" target="_blank">Stock Audit Verdadero✅</a>
-        </div>
-        <div class="audit-box">
-            <a href="https://otonielvz.github.io/Excedente-Put-Away/" class="audit-option" target="_blank">Excedente Put Away❗</a>
-        </div>
-        <div class="audit-box">
-            <a href="https://otonielvz.github.io/Faltante/" class="audit-option" target="_blank">Faltante Put Away🔴</a>
-        </div>
-        <div class="audit-box">
-            <a href="https://otonielvz.github.io/Rezagos/" class="audit-option" target="_blank">Auditoría Rezagos💹</a>
-        </div>
-        <div class="audit-box">
-            <a href="https://otonielvz.github.io/TSVH/" class="audit-option" target="_blank">TS HV Faltante/Sobrante📱</a>
-        </div>
-    </div>
-
-    <div class="snow" id="snow"></div>
+    <h2>Se mudó a la pagina de LP MTY😎</h2>
+    <a href="https://sites.google.com/mercadolibre.com.mx/sitelpmonterrey/inicio">Click Aqui</a>
     
-    <img src="https://static.vecteezy.com/system/resources/thumbnails/012/520/954/small_2x/christmas-with-santa-claus-and-reindeer-flying-png.png" alt="Reno" class="reindeer" />
-
-    <script>
-        const snowContainer = document.getElementById('snow');
-
-        function createSnowflake() {
-            const snowflake = document.createElement('div');
-            snowflake.className = 'snowflake';
-            snowflake.textContent = '❄'; // Copo de nieve
-            snowflake.style.left = Math.random() * 100 + 'vw'; // Posición horizontal aleatoria
-            snowflake.style.fontSize = Math.random() * 1.5 + 0.5 + 'em'; // Tamaño aleatorio
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Duración de la caída aleatoria
-            snowflake.style.opacity = Math.random() + 0.3; // Opacidad aleatoria
-            snowContainer.appendChild(snowflake);
-
-            // Eliminar el copo de nieve después de que cae
-            snowflake.addEventListener('animationend', () => {
-                snowflake.remove();
-            });
-        }
-
-        setInterval(createSnowflake, 300); // Crear un copo de nieve cada 300 ms
-    </script>
 </body>
 </html>
