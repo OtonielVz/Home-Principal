@@ -1,41 +1,284 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUDO</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
-        *{margin: 0; padding: 0;}
-        body {
-            font-family: 'Poppins', sans-serif;
-            display: grid;
-            place-content: center;
-            place-items: center;
-            height: 100dvh;
-        }
-        a{
-            text-decoration: none;
-            background-color: rgb(49, 108, 255);
-            color: #fff;
-            width: 16em;
-            height: 3em;
-            border-radius: 6px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditorías LP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-            &:hover{
-                background-color: rgb(80, 130, 254);
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-            }
-        }
-    </style>
-    
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #1e2a38;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .firstSection,
+    .tSection,
+    .thSection {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      padding: 2rem;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .FormsColor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2c3e50;
+      color: #fff;
+      padding: 1.2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s ease;
+      font-weight: 500;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .FormsColor:hover {
+      background: #34495e;
+      transform: translateY(-3px);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .container a {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .container img {
+      width: 60px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .container p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      ul,
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .docs {
+      background: #027002;
+    }
+
+    .docs:hover {
+      background: #46c946f2;
+    }
+
+    .aps {
+      background: #a22828;
+    }
+
+    .aps:hover {
+      background: #d85656;
+    }
+
+    .tab {
+      background: #e79600;
+    }
+
+    .tab:hover {
+      background: #efb445;
+    }
+  </style>
 </head>
+
 <body>
-    <h2>Se mudó a la pagina de LP MTY😎</h2>
-    <a href="https://sites.google.com/mercadolibre.com.mx/sitelpmonterrey/auditorias_1">Click Aqui</a>
-    
+  <!-- Sección 1: Auditorías LP -->
+  <section class="firstSection">
+      <h2>Auditorías LP</h2>
+      <ul>
+          <li><a class="FormsColor docs"
+                  href="https://docs.google.com/spreadsheets/d/1zE_oSG0tJtDcu0xO6mx7VODaYFNf9H1D-6c3GrnnixY/edit?gid=1379062538#gid=1379062538"
+                  target="_blank" title="Google Sheets">📃Auditoria Put Away</a></li>
+          <li><a class="FormsColor docs"
+                  href="https://docs.google.com/spreadsheets/d/1gmDOVsRLBbBgtC-Mu1PfC4gixe6S7_r28pXkoOMemp8/edit?pli=1&gid=550809314#gid=550809314"
+                  target="_blank" title="Google Sheets">📃Auditorias LP-C. Avance</a></li>
+          <li><a class="FormsColor docs"
+                  href="https://docs.google.com/spreadsheets/d/16hB9Zq2BMP1BtlDTTXOi1P5k2_1b8_3TGYxvRvyZmME/edit?gid=383369335#gid=383369335"
+                  target="_blank" title="Google Sheets">📃Melis para Found</a></li>
+          <li><a class="FormsColor docs"
+                  href="https://docs.google.com/spreadsheets/u/0/d/131N2nN5P-gRI1INi97MvLhu0rek5YgObt_i-kJDSoE8/edit?gid=0&pli=1&authuser=0#gid=0"
+                  target="_blank" title="Google Sheets">📃Staff Daily Review</a></li>
+          <li><a class="FormsColor aps"
+                  href="https://www.appsheet.com/Account/Login?appName=LP%20-%20Caza%20Lost&FullScope=FormsColorlse&provider=google&returnUrl=https%3A%2F%2Fwww.appsheet.com%2Fstart%2FFormsColora48add-3cc0-46eb-90be-0b82b86975f6#appName=LP-CazaLost-PROD-771593323&group=%5B%7B%22Column%22%3A%22PASILLO+DISPLAY%22%2C%22Order%22%3A%22Ascending%22%7D%5D&page=deck&sort=%5B%7B%22Column%22%3A%22PRIORIDAD%22%2C%22Order%22%3A%22Ascending%22%7D%2C%7B%22Column%22%3A%22ZONA%22%2C%22Order%22%3A%22Ascending%22%7D%2C%7B%22Column%22%3A%22PISO%22%2C%22Order%22%3A%22Ascending%22%7D%2C%7B%22Column%22%3A%22PASILLO%22%2C%22Order%22%3A%22Ascending%22%7D%2C%7B%22Column%22%3A%22MODULO%22%2C%22Order%22%3A%22Ascending%22%7D%2C%7B%22Column%22%3A%22NIVEL%22%2C%22Order%22%3A%22Ascending%22%7D%2C%7B%22Column%22%3A%22POSICION%22%2C%22Order%22%3A%22Ascending%22%7D%2C%7B%22Column%22%3A%22INSURANCE_COST_USD_CURRENT%22%2C%22Order%22%3A%22Descending%22%7D%5D&table=1.2+USUARIO&view=PendientesUsuario"
+                  target="_blank" title="AppSheet">📴App Caça Lost</a></li>
+          <li><a class="FormsColor aps"
+                  href="https://www.appsheet.com/start/a66768a2-3ccb-4f5e-b273-54681f3fc261?platform=desktop#vss=H4sIAAAAAAAAA62RQU7DMBBFr1LN2kVp1BTwDihCCFGktGJBjZATT5BFYkeJTakiH4lTcDHGpYgNYgHs7Bn_N_O_B3jWuFk6WT4BXw9ftyvcAodBwGrbogAu4Mwa19laABOwkM1H8cQr7Wz39ipHCkc5lrqwAgKEe_bJctgDH36P4v-3FQOt0DhdaewiN1KIt2dQOxKo8J0eAoPGO1nUuDMV9XvhTyoGubWOugopYgZz6STpm5ZKaZJm4yQdJ7NVOuFZxqeHB5PZUTI9ntzR04vO-vaUDK8pzKXt3O4cp9a-MaR_yO1m4ZuCzDC46VQ0BXPsSzRKm0f6hBBo68qWvkd1SyH-Mbz-0py_tNKoa6vIcSXrHsM7Qhtf_EMCAAA=&view=Auditor%C3%ADa%20de%20Recibo&appName=AUDITOR%C3%8DADERECIBOS-985250700"
+                  target="_blank" title="AppSheet">📴App Auditora de Recibos</a></li>
+          <li><a class="FormsColor aps"
+                  href="https://www.appsheet.com/start/a66768a2-3ccb-4f5e-b273-54681f3fc261?platform=desktop#vss=H4sIAAAAAAAAA6XOQQ7CIBQE0LvMmhOwNcYYoxuNG-kCy29CpNAUqjaEu_urNq7VJUPe_Mm4Wrrtk64vkKf8eW1ohERWOIwdKUiFRfCpD05BKOx0-wpXenShN1GhoFRi9okiZP6Oy_-uC1hDPtnGUj91TZI73o6_J8XBbFormsColorE2iHps6PnYDalcNaEeohkjjzlhwlx7Zf3TnuzDYYrG-0ilQdHx0ywZQEAAA==&view=Gaylords&appName=AUDITOR%C3%8DADEREZAGOSMXCD02-985250700"
+                  target="_blank" title="AppSheet">📴App Auditoria Rezagos</a></li>
+          <li><a class="FormsColor"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSddCDtEK59C82SEDgXVqy7zqUAl4-7RAHXtLDfY9aNdzyJiZA/formrestricted"
+                  target="_blank" title="Google Forms">💬Registro de Rezagos</a></li>
+          <li><a class="FormsColor tab"
+                  href="https://tableau.adminml.com/#/site/Shipping/views/TableroSteercoEstimado/FPP/7acd7d9e-f6b6-43f0-b29c-d6c0cf68ae8d/MXNL01?:iid=2"
+                  target="_blank" title="Tableau">📉STEERCO-Tableau</a></li>
+          <li><a class="FormsColor tab"
+                  href="https://lookerstudio.google.com/reporting/4a956b12-940f-4d12-9d84-da42d2f557d2/page/page_12345"
+                  target="_blank" title="Tableau">📉Responsables - Tablero</a></li>
+          <li><a class="FormsColor"
+                  href="https://docs.google.com/forms/d/1oqKKxHfkRszkkwRsrFHABQdQvFgzALV4I7j7b8gPRGE/viewform?edit_requested=true"
+                  title="Forms Iventarios">💬Form Eliminación Found</a></li>
+          <li><a class="FormsColor"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdI0TRGlQrxWBSfJanhbMNKS46pMzRjVk7b685b8tae1VgE6g/formrestricted"
+                  target="_blank" title="Google Forms">💬Reporte de Auditorías</a></li>
+          <li><a class="FormsColor"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdMeyzPgdjyIlbrAa_gPg4cydKzoXLZ2jIHSrsgPaKy8t7A1g/formrestricted"
+                  target="_blank" title="Google Forms Inbound Audit">💬Form Put Away-IA</a></li>
+                  <li><a class="FormsColor"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSelcL5Zsi9a57hlm5l2DrI5Zb4DuccUXOsdLO0l9ZrpQ7TN8A/viewform"
+                    target="_blank" title="Google Forms Inbound Audit">💬Empaques Vacios</a></li>
+
+      </ul>
+  </section>
+
+  <!-- Sección 2: Formatos para incidencias -->
+  <section class="tSection">
+      <h2>Formatos para incidencias 🤖</h2>
+      <ul>
+          <li><a class="FormsColor" href="https://otonielvz.github.io/Responsables/" target="_blank"
+                  title="Generador de Texto Automatico">Inbound Audit</a></li>
+          <li><a class="FormsColor" href="https://otonielvz.github.io/Stock-Audit/" target="_blank"
+                  title="Generador de Texto Automatico">Stock Audit Verdadero</a></li>
+          <li><a class="FormsColor" href="https://otonielvz.github.io/Stock-Audit-FormsColorlso/" target="_blank"
+                  title="Generador de Texto Automatico">Stock Audit FormsColorlso</a></li>
+          <li><a class="FormsColor" href="https://otonielvz.github.io/Excedente-Put-Away/" target="_blank"
+                  title="Generador de Texto Automatico">Excedente Put Away</a></li>
+          <li><a class="FormsColor" href="https://otonielvz.github.io/FormsColorltante/" target="_blank"
+                  title="Generador de Texto Automatico">FormsColorltante Put Away</a></li>
+          <li><a class="FormsColor" href="https://otonielvz.github.io/Rezagos/" target="_blank"
+                  title="Generador de Texto Automatico">Auditoría Rezagos</a></li>
+          <li><a class="FormsColor" href="https://otonielvz.github.io/TSVH/" target="_blank"
+                  title="Generador de Texto Automatico">Faltante/Sobrante WWH</a></li>
+
+          <li><a class="FormsColor aps" href="https://otonielvz.github.io/StegaInMelisError/" target="_blank"
+                  title="Generador de Texto Automatico">Hallazgos Melis dobles</a></li>
+      </ul>
+  </section>
+
+  <!-- Sección 3: Otros formatos y templates -->
+  <section class="thSection">
+      <h2>Otros Formatos</h2>
+      <div class="container">
+          <a href="https://tableau.adminml.com/#/site/Shipping/views/TableroSteercoEstimado/FPP/72c78747-8f87-47c7-9746-dac1472aff2a/FPPNL01Steerco?:iid=1"
+              target="_blank">
+              <img style="height: 60px; width:90px;"src="https://th.bing.com/th/id/OIP.w-qTcyA4TSToAE1FZlj5nwHaEK?rs=1&pid=ImgDetMain" alt="Tableau">
+              <p>Tableau - FPP</p>
+          </a>
+          <a href="https://lookerstudio.google.com/reporting/0627a8d1-40a9-434f-ae10-eb5141a113e4?s=oa418fQtCDc"
+              target="_blank">
+              <img src="https://cdn-icons-png.freepik.com/512/6292/6292175.png" alt="Dashboard">
+              <p>Dashboard Pending Analysis</p>
+          </a>
+          <a href="https://lookerstudio.google.com/reporting/f6bbf71e-350b-455b-90f3-df531a7aed2f?s=nnex8mmKe7w"
+              target="_blank">
+              <img src="https://cdn-icons-png.freepik.com/256/16139/16139673.png?semt=ais_hybrid" alt="Dashboard">
+              <p>Dashboard Auditorías LP Monterrey</p>
+          </a>
+
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdmt85RnYGle2yvGG0HempEsBa1bQA2l0Xe9W0z6YSv2Uqww/formrestricted"
+              target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/3200/3200751.png" alt="Registro">
+              <p>Registro, entrega de retiros</p>
+          </a>
+          
+          <a href="https://lookerstudio.google.com/u/5/reporting/a1056d75-7b64-4170-a71b-10dfb1199f1f/page/y4ORE?pli=1"
+              target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/2857/2857399.png" alt="KPIAuditorias">
+              <p>Tablero KPI Auditorias</p>
+          </a>
+      </div>
+
+      <h2>Templates Auditorías 🔎</h2>
+      <div class="container">
+          <a href="https://docs.google.com/spreadsheets/d/1Yr_3q28LOwxzXtgV5Jhf4g98_zOMpxnnnjK3hbyi58U/copy"
+              target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/4839/4839558.png" alt="Template">
+              <p>Template Auditoría Dirigida</p>
+          </a>
+          <a href="https://docs.google.com/spreadsheets/d/13_WcERcPK9fsx-DB0sAYMlaJRxtDBSc2m1KYiH40d8k/copy"
+              target="_blank">
+              <img src="https://cdn-icons-png.freepik.com/512/8993/8993841.png" alt="Template">
+              <p>Template Auditoría Rezagos</p>
+          </a>
+          <a href="https://docs.google.com/spreadsheets/d/1cspHVYIa6LwCc5f6BjNcreB6D9FpZI80ZICa5MXTZk4/copy"
+              target="_blank"><img
+                  src="https://images.vexels.com/media/users/3/142877/isolated/preview/f71decb4816cd27d4460d37b314d2fbf-documento-de-grafico-plano.png"
+                  alt="AuditoriaTransfer">
+              <p>Auditoria Transfer</p>
+          </a>
+          <a href="https://docs.google.com/spreadsheets/d/1bZ_e17ZzT-9ubLXchG1U2oB65I_T-J2vBaxlwPJ-lfg/copy"
+          target="_blank"><img
+              src="https://cdn-icons-png.flaticon.com/512/2660/2660505.png"
+              alt="AuditoriaRR">
+          <p>Auditoria RR</p>
+      </a>
+      </div>
+  </section>
 </body>
+
 </html>
